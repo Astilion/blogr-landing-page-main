@@ -15,7 +15,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		height: 85vh;
 		max-height: 85vh;
 		width: 85%;
 		left: 150%;
@@ -30,7 +29,7 @@
 		transition: transform .5s;
 
 		&--active {
-			transform: translate(-50%, 12%);
+			transform: translate(-50%, 70px);
 			left: 50%;
 
 		}
@@ -86,10 +85,21 @@
 			margin: 1em;
 			width: 50%;
 			align-self: center;
+			font-weight: bold;
 			border-radius: 50px;
 			padding: 1em;
-			background-color: red;
 			cursor: pointer;
+			&:hover {
+				background-color: lightgray;
+			}
+		}
+		.login-btn {
+			color: black;
+			background-color: transparent;
+		}
+		.signup-btn {
+			background-color: tomato;
+			color: white;
 		}
 	}
 	.burger-btn {
@@ -101,14 +111,7 @@
 		align-self: center;
 		background: transparent;
 		cursor: pointer;
-		&:hover {
-			.close-icon {
-				fill: red;
-			}
-			.burger-icon {
-				fill: red;
-			}
-		}
+		
 		.close-icon {
 			display: none;
 		}
