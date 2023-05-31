@@ -1,7 +1,8 @@
+
+
 .nav {
 	position: relative;
 	display: flex;
-
 	.logo {
 		padding: 0.3em;
 		font-size: 4rem;
@@ -13,8 +14,9 @@
 		position: absolute;
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-start;
 		height: 85vh;
+		max-height: 85vh;
 		width: 85%;
 		left: 50%;
 		transform: translate(-50%, 12%);
@@ -23,14 +25,20 @@
 		list-style: none;
 		border-radius: 8px;
 		background-color: white;
+		overflow-y: auto;
+		padding: 1em;
+
 	}
 	&__secondary-items {
 		position: relative;
 		margin-bottom: 1em;
+		padding: 1em;
 		background-color: lightgray;
 		border: 8px;
 		width: 90%;
 		display: flex;
+		display: none;
+		border-radius: 8px;
 		flex-direction: column;
 		align-items: center;
 		list-style: none;
@@ -38,18 +46,47 @@
 	&__primary-item {
 		position: relative;
 		padding: 1em;
-
+		
 		font-weight: bold;
 		font-size: 2rem;
 		width: 90%;
+		cursor: pointer;
+		transition: color .3s;
+		&:hover {
+			color: #be762f;
+		}
+		
 	}
 	&__secondary-item {
-		padding: .5em;
+		padding: 0.5em 1em;
 		font-size: 1.8rem;
 		color: rgb(109, 109, 109);
 	}
 	.buttons-container {
-		display: none;
+		margin-top: 4rem;
+		position: relative;
+		width: 100%;
+		&::before {
+			position: absolute;
+			content: '';
+			height: 1px;
+			background-color: black;
+			top: -10px;
+			width: 100%;
+		}
+		display: flex;
+		flex-direction: column;
+		button {
+			position: relative;
+			border: none;
+			margin: 1em;
+			width: 50%;
+			align-self: center;
+			border-radius: 50px;
+			padding: 1em;
+			background-color: red;
+			cursor: pointer;
+		}
 	}
 	.burger-btn {
 		position: absolute;
@@ -74,6 +111,7 @@
 		.burger-icon {
 			display: none;
 		}
+
 
 		.active {
 			display: block;
