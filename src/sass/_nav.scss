@@ -125,3 +125,48 @@
 		}
 	}
 }
+
+@media (min-width: 992px) {
+	.nav {
+		&__primary-items {
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			height: 100%;
+			left: 0px;
+			background-color: transparent;
+			overflow: hidden;
+			padding: 0;
+			color: white;
+		}
+		&__primary-item {
+			width: 20%;
+			top: 10px;
+			font-size: 1.7rem;
+		}
+		&__secondary-items {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			top: 100%;
+			width: 20%;
+			z-index: 100;
+		}
+		.burger-btn {
+			display: none;
+		}
+		.buttons-container {
+			&::before {
+				display: none;
+			}
+			flex-direction: row;
+			margin-top: 0;
+			justify-content: flex-end;
+			right: 5%;
+			button {
+				width: 20%;
+			}
+		}
+	}
+}
+
