@@ -135,7 +135,7 @@
 			height: 100%;
 			left: 0px;
 			background-color: transparent;
-			overflow: hidden;
+			overflow: visible;
 			padding: 0;
 			color: white;
 		}
@@ -143,14 +143,26 @@
 			width: 20%;
 			top: 10px;
 			font-size: 1.7rem;
+			&:hover {
+				.nav__secondary-items {
+					opacity: 1;
+				}
+			}
 		}
 		&__secondary-items {
 			display: flex;
 			flex-direction: column;
 			position: absolute;
-			top: 100%;
-			width: 20%;
+			top: 96%;
+			left: 0;
+			width: 100%;
+			border-radius: 0 0 8px 8px;
 			z-index: 100;
+			opacity: 0;
+		}
+		&__secondary-item {
+			align-self: center;
+			font-size: 1.6rem;
 		}
 		.burger-btn {
 			display: none;
