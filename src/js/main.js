@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const burgerBtn = document.querySelector(".burger-btn");
     const primaryItems = document.querySelectorAll(".nav__primary-item");
     const navMobile = document.querySelector(".nav__primary-items");
+
   
     const handleNav = () => {
       closeIcon.classList.toggle("active");
@@ -11,11 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
       navMobile.classList.toggle("nav__primary-items--active");
     };
     function toggleSubMenu(item) {
-        const subMenu = item.nextElementSibling;
+        const subMenu = item.firstElementChild;
     
         primaryItems.forEach(primaryItem => {
             if (primaryItem !== item) {
-                const otherSubMenu = primaryItem.nextElementSibling;
+                const otherSubMenu = primaryItem.firstElementChild;
                 otherSubMenu.classList.remove("active");
     
             }
