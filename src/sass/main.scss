@@ -14,10 +14,11 @@ html {
 }
 body{
     font-size: 1.8rem;
-    background-color: gray;
+    background-color: white;
     font-family: sans-serif;
 	max-width: 100%;
-	overflow: hidden;
+	overflow-x: hidden;
+	
 }
 
 .active {
