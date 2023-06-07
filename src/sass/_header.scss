@@ -1,4 +1,54 @@
-header {
-    background-color: black;
-    height: 100vh;
+.header {
+	position: relative;
+	top: -69px;
+	height: 90vh;
+	max-width: 100%;
+	&__hero-img {
+		position: absolute;
+		border-radius: 0 0 0 160px;
+		height: 100%;
+		width: 100%;
+		max-width: 100%;
+		background: rgb(255, 90, 96);
+		background: radial-gradient(
+			circle,
+			rgba(255, 90, 96, 1) 55%,
+			rgba(255, 82, 92, 1) 100%
+		);
+		overflow: hidden;
+		z-index: -1;
+
+		img {
+			position: relative;
+			height: 200%;
+			left: -100%;
+			top: -36%;
+			opacity: 0.5;
+		}
+	}
+	&__container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		z-index: 1;
+	}
+	&__text {
+		color: white;
+		margin-bottom: 2em;
+
+	}
+	&__h1 {
+		font-weight: normal;
+		padding: 0.5em;
+		font-size: 3.8rem;
+	}
+	&__p {
+		font-size: 2.2rem;
+	}
 }
