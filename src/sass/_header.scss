@@ -18,12 +18,15 @@
 		overflow: hidden;
 		z-index: -1;
 
-		img {
+		.mobile-img {
 			position: relative;
 			height: 200%;
 			left: -100%;
 			top: -36%;
 			opacity: 0.5;
+		}
+		.desktop-img {
+			display: none;
 		}
 	}
 	&__container {
@@ -50,5 +53,77 @@
 	}
 	&__p {
 		font-size: 2.2rem;
+	}
+	&__btns-container {
+		display: flex;
+		position: relative;
+		justify-content: center;
+		gap: .5em;
+	}
+	&__btn {
+		position: relative;
+		border: none;
+		width: 150px;
+		align-self: center;
+		font-weight: bold;
+		border-radius: 50px;
+		font-size: 1.8rem;
+		padding: 1em;
+		border: 1px solid white;
+		cursor: pointer;
+		&:hover {
+			background-color: gray;
+			color: white;
+		}
+	}
+	&__start-btn {
+		color: rgb(255, 90, 96);
+	}
+	&__learn-btn {
+		background-color: transparent;
+
+		color: white;
+	}
+	
+}
+
+@media (min-width:720px) {
+	.header {
+		&__hero-img{
+			.mobile-img{
+				left: -76%;
+				height: 250%;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.header {
+		&__hero-img {
+			.mobile-img {
+				display: none;
+			}
+			.desktop-img {
+				display: block;
+				position: relative;
+				height: 300%;
+				left: -67%;
+				top: -100%;
+				opacity: 0.5;
+			}
+		}
+	}
+}
+@media (min-width: 1200px 
+) {
+	.header {
+		&__hero-img{
+			.desktop-img{
+				top: -120%;
+				left: -40%;
+				height: 400%;
+			}
+		}
 	}
 }
