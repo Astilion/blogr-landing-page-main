@@ -1,0 +1,30 @@
+.overview {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 100%;
+    &__phones {
+        img {
+            position: relative;
+            width: 100%;
+            top: 150px;
+        }
+    }
+    &__background {
+        img {
+            width: 150%;
+            height: 100%;
+            left: 0;
+            top: 150px;
+            transform: translate(-17%, 0);
+            background-color: #fff;
+            position: absolute;
+            z-index: -1;
+        }
+
+    }
+}
