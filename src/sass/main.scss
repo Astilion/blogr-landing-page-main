@@ -11,6 +11,8 @@ html {
 	scroll-behavior: smooth;
 	font-size: 62.5%;
 	scroll-padding-top: 56px;
+	max-width: 100%;
+	overflow-x: hidden;
 }
 body{
     font-size: 1.8rem;
