@@ -1,5 +1,5 @@
 .overview {
-    position: relative;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -8,29 +8,16 @@
 	flex-wrap: wrap;
 	width: 100%;
 	height: 100vh;
-    
-    &__text-container {
-        position: relative;
-        left: -100%;
-        z-index: 3;
-    }
-    &__h2 {
-        color: #fff;
-        position: relative;
-        z-index: 5;
-    }
-    &__text {
-        color: #fff;
-    }
+
 	&__background {
 		position: relative;
-		height: 100vh;
+		height: 90vh;
 		width: 100vw;
 		background-color: rgb(38, 27, 70);
 		z-index: -2;
 		border-radius: 0% 150px 0% 150px;
 		.overview__img-container {
-			position: absolute;
+			position: relative;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -43,13 +30,105 @@
 			width: 150%;
 			top: -15rem;
 			z-index: 0;
-            opacity: .5;
+			opacity: 0.5;
 		}
 		.overview__phones {
 			position: absolute;
 			width: 100%;
 			top: -15rem;
 			z-index: 1;
+		}
+	}
+	&__text-container {
+		margin-top: 4em;
+		position: relative;
+		left: -100%;
+		z-index: 3;
+	}
+	&__h2 {
+		padding: 0.5em;
+		color: #fff;
+		font-size: 4rem;
+		font-weight: normal;
+		z-index: 5;
+	}
+	&__text {
+		color: #fff;
+		padding: 1em;
+		line-height: 1.7;
+	}
+}
+
+@media (min-width: 524px) {
+	.overview {
+		&__background {
+			.overview__circle {
+				top: -18rem;
+			}
+			.overview__phones {
+				top: -18rem;
+			}
+		}
+	}
+}
+@media (min-width: 560px) {
+	.overview {
+		&__background {
+			.overview__circle {
+				width: 130%;
+			}
+			.overview__phones {
+				width: 80%;
+			}
+		}
+	}
+}
+@media (min-width: 768px) {
+	.overview {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		height: 35vh;
+		&__background {
+			height: 35vh;
+			grid-column: 1/3;
+			grid-row: 1;
+			.overview__img-container {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+			.overview__circle {
+				grid-column: 1/2;
+				width: 200%;
+				top: -16rem;
+				left: -13rem;
+			}
+			.overview__phones {
+				grid-column: 1/2;
+				width: 155%;
+				top: -2rem;
+			}
+		}
+		&__text-container {
+			grid-column: 2/3;
+			grid-row: 1;
+			top: 0;
+			position: relative;
+			right: 0;
+			z-index: 3;
+		}
+		&__h2 {
+			padding: 0.5em;
+			color: #fff;
+			font-size: 4rem;
+			font-weight: normal;
+			z-index: 5;
+		}
+		&__text {
+			color: #fff;
+			padding: 1em;
+			line-height: 1.7;
+			text-align-last: left;
 		}
 	}
 }
