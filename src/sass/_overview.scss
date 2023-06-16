@@ -15,11 +15,10 @@
 		z-index: -2;
 		background-color: rgb(38, 27, 70);
 		border-radius: 0% 150px 0% 150px;
-		overflow: hidden;
 
 		.overview__img-container {
 			position: relative;
-			top: -15rem;
+			top: -19rem;
 		}
 
 		.overview__circle {
@@ -34,7 +33,6 @@
 			position: absolute;
 			width: 100%;
 			z-index: 2;
-
 		}
 	}
 	&__text-container {
@@ -43,15 +41,98 @@
 	}
 	&__h2 {
 		padding: 0.5em;
-		color: #333;
+		color: #fff;
 		font-size: 4rem;
 		font-weight: normal;
-		z-index: 1;
 	}
 	&__text {
-		color: #333;
+		color: #fff;
+		font-size: 1.8rem;
 		padding: 1em;
 		line-height: 1.7;
-		z-index: 1;
+	}
+}
+
+@media (min-width: 450px) {
+	.overview {
+		&__background {
+			.overview__img-container {
+				top: -22rem;
+			}
+			.overview__circle {
+				transform: scale(1.2);
+			}
+			.overview__phones {
+				transform: scale(0.7);
+			}
+		}
+	}
+}
+@media (min-width: 600px) {
+	.overview {
+		&__background {
+			.overview__img-container {
+				top: -24rem;
+			}
+			.overview__circle {
+				transform: scale(1);
+			}
+			.overview__phones {
+				transform: scale(0.6);
+			}
+		}
+	}
+}
+@media (min-width: 700px) {
+	.overview {
+		&__container {
+			height: 35vh;
+			align-items: flex-end;
+		}
+		&__background {
+			border-radius: 0% 100px 0% 100px;
+			.overview__img-container {
+				width: 35%;
+
+				top: -7rem;
+				left: 5%;
+			}
+			.overview__circle {
+				width: 100%;
+				top: -7rem;
+				left: -3rem;
+				transform: scale(1.7);
+			}
+			.overview__phones {
+				width: 100%;
+				transform: scale(.9);
+			}
+		}
+		&__text-container {
+			text-align: left;
+			margin-right: 3em;
+			width: 50%;
+
+		}
+		&__text {
+			font-size: 1.6rem;
+		}
+
+	}
+}
+
+@media (min-width: 1200px) {
+	.overview {
+		&__background {
+			.overview__img-container{
+				top: -9rem;
+			}
+			.overview__circle{
+				transform: scale(1.4);
+			}
+			.overview__phones {
+				transform: scale(.7);
+			}
+		}
 	}
 }

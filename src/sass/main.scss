@@ -1,4 +1,4 @@
-@use 'index.scss' as *;
+@use "index.scss" as *;
 
 *,
 *::before,
@@ -14,16 +14,15 @@ html {
 	max-width: 100%;
 	overflow-x: hidden;
 }
-body{
-    font-size: 1.8rem;
-    background-color: white;
-    font-family: sans-serif;
+body {
+	font-size: 1.8rem;
+	background-color: white;
+	font-family: sans-serif;
 	max-width: 100%;
 	overflow-x: hidden;
-	
 }
 
 .active {
-    display: block;
+	display: block;
 }
-$bgc : rgb(243, 83, 30);
+$bgc: rgb(243, 83, 30);
