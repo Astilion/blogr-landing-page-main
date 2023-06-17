@@ -44,7 +44,6 @@
 	&__text {
 		color: white;
 		margin-bottom: 2em;
-
 	}
 	&__h1 {
 		font-weight: normal;
@@ -58,7 +57,7 @@
 		display: flex;
 		position: relative;
 		justify-content: center;
-		gap: .5em;
+		gap: 0.5em;
 	}
 	&__btn {
 		position: relative;
@@ -70,10 +69,12 @@
 		font-size: 1.8rem;
 		padding: 1em;
 		border: 1px solid white;
+		transition: color, background-color 0.3s;
 		cursor: pointer;
 		&:hover {
-			background-color: gray;
+			background-color: rgb(255, 255, 255, 0.3);
 			color: white;
+			border: none;
 		}
 	}
 	&__start-btn {
@@ -81,16 +82,19 @@
 	}
 	&__learn-btn {
 		background-color: transparent;
-
 		color: white;
+		transition: color, background-color 0.3s;
+		&:hover {
+			color: tomato;
+			background-color: white;
+		}
 	}
-	
 }
 
-@media (min-width:720px) {
+@media (min-width: 720px) {
 	.header {
-		&__hero-img{
-			.mobile-img{
+		&__hero-img {
+			.mobile-img {
 				left: -76%;
 				height: 250%;
 			}
@@ -101,6 +105,7 @@
 @media (min-width: 992px) {
 	.header {
 		&__hero-img {
+			border-radius: 0;
 			.mobile-img {
 				display: none;
 			}
@@ -115,11 +120,10 @@
 		}
 	}
 }
-@media (min-width: 1200px 
-) {
+@media (min-width: 1200px) {
 	.header {
-		&__hero-img{
-			.desktop-img{
+		&__hero-img {
+			.desktop-img {
 				top: -120%;
 				left: -40%;
 				height: 400%;
