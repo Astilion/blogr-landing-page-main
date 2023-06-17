@@ -3,6 +3,9 @@
 	display: flex;
 	z-index: 100;
 	.logo {
+		position: relative;
+		top: 2rem;
+		left: 5rem;
 		padding: 0.3em;
 		color: #fff;
 		font-size: 4rem;
@@ -64,7 +67,7 @@
 		padding: 0.5em 1em;
 		color: rgb(109, 109, 109);
 		font-size: 1.8rem;
-		transition: color .3s;
+		transition: color 0.3s;
 		cursor: pointer;
 		&:hover {
 			color: #be762f;
@@ -112,6 +115,7 @@
 		position: absolute;
 		align-self: center;
 		right: 1em;
+		top: 3rem;
 		padding: 0.8em;
 		height: 4rem;
 		border: none;
@@ -135,6 +139,10 @@
 	.nav {
 		left: 10%;
 		top: 3rem;
+		.logo {
+			top: 0;
+			left: 0;
+		}
 		&__primary-items {
 			position: relative;
 			display: flex;
@@ -169,7 +177,6 @@
 			border-radius: 5px;
 			z-index: 100;
 			opacity: 0;
-
 		}
 		&__secondary-item {
 			align-self: center;
@@ -178,7 +185,7 @@
 			font-weight: normal;
 			&:hover {
 				font-weight: bold;
-				color:black;
+				color: black;
 			}
 		}
 		.burger-btn {
@@ -195,10 +202,10 @@
 			.nav__btn {
 				width: 20%;
 				color: white;
-				transition: color, background-color .3s;
+				transition: color, background-color 0.3s;
 				&:hover {
 					color: white;
-					background-color: rgb(255, 255, 255, .3);
+					background-color: rgb(255, 255, 255, 0.3);
 				}
 			}
 			.signup-btn {
@@ -206,7 +213,7 @@
 				background-color: white;
 				&:hover {
 					color: white;
-					background-color: rgb(255, 255, 255, .3);
+					background-color: rgb(255, 255, 255, 0.3);
 				}
 			}
 			.login-btn {
@@ -214,7 +221,7 @@
 
 				&:hover {
 					color: white;
-					background-color: rgb(255, 255, 255, .3);
+					background-color: rgb(255, 255, 255, 0.3);
 				}
 			}
 		}
