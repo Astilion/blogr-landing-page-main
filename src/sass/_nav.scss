@@ -34,7 +34,7 @@
 	&__secondary-items {
 		align-self: center;
 		position: relative;
-		margin-bottom: 1em;
+		margin: 1em 0;
 		padding: 1em;
 		background-color: lightgray;
 		border: 8px;
@@ -55,8 +55,8 @@
 		font-weight: bold;
 		font-size: 2rem;
 		width: 90%;
-		cursor: pointer;
 		transition: color 0.3s;
+		cursor: default;
 		&:hover {
 			color: #be762f;
 		}
@@ -65,6 +65,11 @@
 		padding: 0.5em 1em;
 		font-size: 1.8rem;
 		color: rgb(109, 109, 109);
+		cursor: pointer;
+		transition: color .3s;
+		&:hover {
+			color: #be762f;
+		}
 	}
 	.buttons-container {
 		margin-top: 4rem;
@@ -80,7 +85,7 @@
 		}
 		display: flex;
 		flex-direction: column;
-		button {
+		.nav__btn {
 			position: relative;
 			border: none;
 			margin: 1em;
@@ -92,6 +97,7 @@
 			cursor: pointer;
 			&:hover {
 				background-color: lightgray;
+				color: #be762f;
 			}
 		}
 		.login-btn {
@@ -128,12 +134,14 @@
 
 @media (min-width: 992px) {
 	.nav {
+		left: 10%;
+		top: 3rem;
 		&__primary-items {
 			position: relative;
 			display: flex;
 			flex-direction: row;
 			height: 100%;
-			left: 0px;
+			left: 0;
 			background-color: transparent;
 			overflow: visible;
 			padding: 0;
@@ -144,8 +152,11 @@
 			top: 10px;
 			font-size: 1.7rem;
 			&:hover {
+				text-decoration: underline;
+				color: #fff;
 				.nav__secondary-items {
 					opacity: 1;
+					background-color: #fff;
 				}
 			}
 		}
@@ -156,13 +167,20 @@
 			top: 96%;
 			left: 0;
 			width: 100%;
-			border-radius: 0 0 8px 8px;
+			border-radius: 5px;
 			z-index: 100;
 			opacity: 0;
+
 		}
 		&__secondary-item {
 			align-self: center;
 			font-size: 1.6rem;
+			color: black;
+			font-weight: normal;
+			&:hover {
+				font-weight: bold;
+				color:black;
+			}
 		}
 		.burger-btn {
 			display: none;
@@ -175,15 +193,30 @@
 			margin-top: 0;
 			justify-content: flex-end;
 			right: 5%;
-			button {
+			.nav__btn {
 				width: 20%;
+				color: white;
+				transition: color, background-color .3s;
+				&:hover {
+					color: white;
+					background-color: rgb(255, 255, 255, .3);
+				}
 			}
 			.signup-btn {
-				background-color:white;
+				background-color: white;
 				color: tomato;
+				&:hover {
+					color: white;
+					background-color: rgb(255, 255, 255, .3);
+				}
 			}
 			.login-btn {
 				color: white;
+
+				&:hover {
+					color: white;
+					background-color: rgb(255, 255, 255, .3);
+				}
 			}
 		}
 	}
