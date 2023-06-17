@@ -33,6 +33,11 @@ margin-top: 5em;
 }
 &__li {
     padding: .3em;
+    cursor: pointer;
+    transition: color .3s;
+    &:hover {
+        color: tomato;
+    }
 }
 }
 
