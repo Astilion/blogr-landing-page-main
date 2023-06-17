@@ -11,11 +11,11 @@
 	}
 	&__background {
 		position: absolute;
-		height: 85%;
 		width: 100%;
-		z-index: -2;
+		height: 85%;
 		background-color: #423765;
 		border-radius: 0% 150px 0% 150px;
+		z-index: -2;
 
 		.overview__img-container {
 			position: relative;
@@ -25,9 +25,9 @@
 		.overview__circle {
 			position: absolute;
 			width: 100%;
-			z-index: 1;
-			transform: scale(1.6);
 			opacity: 0.5;
+			transform: scale(1.6);
+			z-index: 1;
 		}
 
 		.overview__phones {
@@ -87,8 +87,8 @@
 @media (min-width: 700px) {
 	.overview {
 		&__container {
-			height: 35vh;
 			align-items: flex-end;
+			height: 35vh;
 		}
 		&__background {
 			border-radius: 0% 100px 0% 100px;
@@ -99,9 +99,9 @@
 				left: 5%;
 			}
 			.overview__circle {
-				width: 100%;
 				top: -7rem;
 				left: -3rem;
+				width: 100%;
 				transform: scale(1.7);
 			}
 			.overview__phones {

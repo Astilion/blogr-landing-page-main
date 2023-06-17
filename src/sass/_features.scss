@@ -1,10 +1,10 @@
 .features {
 	display: flex;
 	flex-direction: column;
+	gap: 2em;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	gap: 2em;
 	margin-top: 10rem;
 
 	&__text-container {
@@ -12,14 +12,14 @@
 			margin-bottom: 1em;
 		}
 		.features__h2 {
+			padding: 1em;
 			color: #333;
 			font-size: 3.2rem;
-			padding: 1em;
 		}
 		.features__p {
+			padding: 0 1em;
 			color: #333;
 			line-height: 1.7;
-			padding: 0 1em;
 		}
 	}
 }

@@ -3,11 +3,11 @@ margin-top: 5em;
     &__container {
 
         position: relative;
-        background-color: #333;
-        text-align: center;
-        color: gray;
-        border-radius: 0 100px 0 0;
         padding-bottom: 2em;
+        background-color: #333;
+        color: gray;
+        text-align: center;
+        border-radius: 0 100px 0 0;
         .logo {
             padding: .7em;
             font-size: 5rem;
@@ -24,17 +24,17 @@ margin-top: 5em;
     padding: 1em;
 }
 &__h3 {
-    font-weight: bold;
-    color: #fff;
     padding: 1em;
+    color: #fff;
+    font-weight: bold;
 }
 &__list {
     list-style: none;
 }
 &__li {
     padding: .3em;
-    cursor: pointer;
     transition: color .3s;
+    cursor: pointer;
     &:hover {
         color: tomato;
     }
